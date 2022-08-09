@@ -1,12 +1,12 @@
 terraform {
-    cloud {
+  cloud {
     organization = "tafari"
 
     workspaces {
       name = "Cloud-Resume-Front-End"
     }
   }
-  
+
 
   required_providers {
     aws = {
