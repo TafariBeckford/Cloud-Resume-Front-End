@@ -88,7 +88,9 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: terraform plan -var-file="terraform.tfvars"
+      env: 
+        TF_VAR_aws_region: us-east-1
+      run: terraform plan -input=false
      
 
       # On push to "main", build or change infrastructure according to Terraform configuration files
