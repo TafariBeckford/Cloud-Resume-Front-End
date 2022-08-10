@@ -110,4 +110,4 @@ jobs:
       
     - name: S3 Bucket Sync
        run:|    
-          aws s3 sync cloudresume/ ${{ secrets.BUCKET_NAME }} 
+          aws s3 sync cloudresume ${{ secrets.BUCKET_NAME }} 
