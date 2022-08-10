@@ -31,7 +31,7 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
       with:
-        cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+        cli_config_credentials_token: ${{secrets.TF_API_TOKEN}}
         
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
@@ -62,4 +62,27 @@ jobs:
         TF_VAR_domain_name: ${{secrets.DOMAIN_NAME}}
         TF_VAR_profile: ${{secrets.AWS_PROFILE}}
       run: terraform apply -auto-approve -input=false
+
+
+      #Sync S3 Bucket
+    -   name: S3 Sync
+        uses: jakejarvis/s3-sync-action@v0.5.1
+        with:
+          args: --acl public-read --delete
+        env:
+          AWS_S3_BUCKET: ${{secrets.BUCKET_NAME}}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{secrets.AWS_REGION}}
+          SOURCE_DIR: 'cloudresume'
       
+
+      # Invalidate Cloufront
+    -   name: Invalidate Cloudfront
+        uses: chetan/invalidate-cloudfront-action@v1.3
+        env:
+          DISTRIBUTION: ${{secrets.DISTRIBUTION }}
+          PATHS: '/*'
+          AWS_REGION: ${{secrets.AWS_REGION}}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
