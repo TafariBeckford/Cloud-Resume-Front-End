@@ -106,3 +106,7 @@ jobs:
         TF_VAR_domain_name: ${{secrets.DOMAIN_NAME}}
         TF_VAR_profile: ${{secrets.AWS_PROFILE}}
       run: terraform apply -auto-approve -input=false
+      
+      
+    - name: S3 Bucket Sync
+      run: aws s3 cp cloudresume/ s3://${{secrets.BUCKET_NAME}}/ --recursive
