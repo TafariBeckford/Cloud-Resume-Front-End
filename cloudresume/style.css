@@ -35,11 +35,11 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .certifications, .skills, .projects, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
-.services .serv-content,
+.certifications .serv-content,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -263,21 +263,21 @@ section .title::before{
     background: none;
 }
 
-/* services section styling */
-.services, .teams{
+/* certifications section styling */
+.certifications, .projects{
     color:#fff;
     background: #001220;
 }
-.services .title::before,
-.teams .title::before{
+.certifications .title::before,
+.projects .title::before{
     background: #fff;
 }
-.services .title::after,
-.teams .title::after{
+.certifications .title::after,
+.projects .title::after{
     background: #001220 ;
    
 }
-.services .serv-content .card{
+.certifications .serv-content .card{
     width: calc(33% - 20px);
     background: "";
     text-align: center;
@@ -286,24 +286,24 @@ section .title::before{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover{
+.certifications .serv-content .card:hover{
     background: "";
 }
-.services .serv-content .card .box{
+.certifications .serv-content .card .box{
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover .box{
+.certifications .serv-content .card:hover .box{
     transform: scale(1.05);
 }
-.services .serv-content .card i{
+.certifications .serv-content .card i{
     font-size: 50px;
     color: crimson;
     transition: color 0.3s ease;
 }
-.services .serv-content .card:hover i{
+.certifications .serv-content .card:hover i{
     color: #fff;
 }
-.services .serv-content .card .text{
+.certifications .serv-content .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
@@ -382,7 +382,7 @@ section .title::before{
     width: 70%;
 }
 
-.teams .carousel .card{
+.projects .carousel .card{
     background: #001220;
     border-radius: 6px;
     padding: 25px 35px;
@@ -390,25 +390,25 @@ section .title::before{
     overflow: hidden;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover{
+.projects .carousel .card:hover{
     background: crimson;
 }
-.teams .carousel .card .box{
+.projects .carousel .card .box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover .box{
+.projects .carousel .card:hover .box{
     transform: scale(1.05);
 }
-.teams .carousel .card .text{
+.projects .carousel .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-.teams .carousel .card img{
+.projects .carousel .card img{
     height: 150px;
     width: 150px;
     object-fit: cover;
@@ -416,7 +416,7 @@ section .title::before{
     border: 5px solid crimson;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover img{
+.projects .carousel .card:hover img{
     border-color: #fff;
 }
 .owl-dots{
@@ -526,7 +526,7 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
-    .services .serv-content .card{
+    .certifications .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -550,7 +550,7 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    .services .serv-content .card{
+    .certifications .serv-content .card{
         width: 100%;
     }
 }
