@@ -63,7 +63,3 @@ jobs:
         TF_VAR_profile: ${{secrets.AWS_PROFILE}}
       run: terraform apply -auto-approve -input=false
       
-      
-    - name: S3 Bucket Sync
-      run: |  
-          aws s3 sync cloudresume/ ${{secrets.BUCKET_NAME}} 
