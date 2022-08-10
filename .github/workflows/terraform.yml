@@ -109,4 +109,4 @@ jobs:
       
       
     - name: S3 Bucket Sync
-      run: aws s3 cp cloudresume/ s3://${{secrets.BUCKET_NAME}}/ --recursive
+      run: aws s3 sync cloudresume s3://${{secrets.BUCKET_NAME}}
