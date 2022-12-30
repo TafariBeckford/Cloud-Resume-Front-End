@@ -168,7 +168,7 @@ section .title::before{
 /* home section styling */
 .home{
     display: flex;
-    background-image: url(/layered-waves-haikei.svg);
+    background-image: url(images/layered-waves-haikei.svg);
     background-color:#001220 ;
     height: 100vh;
     color: #fff;
