@@ -9,6 +9,8 @@
 }
 html{
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* custom scroll bar */
@@ -37,6 +39,7 @@ section{
 }
 .about, .certifications, .skills, .projects, .contact, footer{
     font-family: 'Poppins', sans-serif;
+    
 }
 .about .about-content,
 .certifications .serv-content,
@@ -162,6 +165,10 @@ section .title::before{
     color: #FBAE3C;
   }
   .fa-github:hover{
+    color: #FBAE3C;
+  }
+
+  .fa-envelope:hover{
     color: #FBAE3C;
   }
 
@@ -625,4 +632,48 @@ footer span a:hover{
         width: calc(100% + 1.3px);
         height: 116px;
     }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 40px;
+  }
+  
+  .grid-item img {
+    max-width: 100%;
+    height: auto;
+    transition: all .2s ease-in-out;
+  }
+ 
+
+  .grid-item img:hover{
+
+    transform: scale(1.1);
+  }
+
+  img[title] {
+    position: relative;
+  }
+  
+  img[title]:hover::after {
+    content: attr(title);
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    border-radius: 7px;
+  }
+
+#particles-js {
+   
+position: absolute;
+width: 100%;
+height: 100%;   
+pointer-events: none;  
+      
 }

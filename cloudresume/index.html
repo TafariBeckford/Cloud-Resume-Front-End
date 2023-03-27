@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tafari's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <script src="https://kit.fontawesome.com/84a1e6fa92.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
@@ -38,6 +43,7 @@
     </nav>
 
     <section class="home" id="home">
+        <div id="particles-js"></div>
         <div class="max-width">
             <div class="home-content">
                 <div class="text-2">Hi<span>&#128075;</span>, I'm <span class="typing"></span></div>
@@ -56,11 +62,14 @@
 
     <!-- About section-->
     <section class="about" id="about">
+        <div id="particles-js"></div>
         <div class="max-width">
             <h2 class="title">About me</h2>
             <div class="about-content">
             
-                    <p>I am Tafari. Quasi ut voluptatum eveniet doloremque autem excepturi eaque, sit laboriosam voluptatem nisi delectus. Facere explicabo hic minus accusamus alias fuga nihil dolorum quae. Explicabo illo unde, odio consequatur ipsam possimus veritatis, placeat, ab molestiae velit inventore exercitationem consequuntur blanditiis omnis beatae. Dolor iste excepturi ratione soluta quas culpa voluptatum repudiandae harum non.</p>
+                    <p>I'm Tafari Beckford, a Cloud Engineer with a passion for DevOps. With knowledge in implementing cloud infrastructure on AWS and automating build and deployment pipelines using tools like Terraform, GitHub Actions, and Kubernetes. I seek to help organizations improve their development processes, scale and secure their applications efficiently. In addition to my technical skills, I have excellent problem-solving and communication skills, enabling me to work collaboratively with cross-functional teams and prioritize critical tasks.
+                        As a lifelong learner, I hold a B.Sc. in Computer Information Systems from Northern Caribbean University and continuously seek to expand my knowledge through certifications and other means. I'm excited to continue learning and growing in the field of cloud computing, and I'm always eager to tackle new challenges and find creative solutions.
+                    </p>
                 
                 
             </div>
@@ -81,18 +90,23 @@
         <div class="max-width">
             <h2 class="title">Tools & Technologies</h2>
             <div class="skills-content">
-                <div class="column left">
-                    <li>AWS</li>
-                    <li>Terraform</li>
-                    <li>MySQL</li>
-                    <li>Linux</li>
-                </div>
-                <div class="column right">
-                    <li>Github Actions</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                </div>
+                <div class="grid-container">
+                    <div class="grid-item"><img src="images/icons/icons8-amazon-web-services-144.png" title="Amazon Web Services"></div>
+                    <div class="grid-item"><img src="images/icons/icons8-terraform-144.png" title="Terraform"></div>
+                    <div class="grid-item"><img src="images/icons/icons8-docker-144.png"title="Docker"></div>
+                    <div class="grid-item"><img src="images/icons/icons8-kubernetes-144.png" title="Kubernetes"></div>
+                    <div class="grid-item"><img src="images/icons/1638283616-packer.png" title="Packer"></div>
+                    <div class="grid-item"><img src="images/icons/helm-icon-color.png" title="Helm"></div>
+                    <div class="grid-item"><img src="images/icons/github-actions.png" title="Github-Actions"></div>
+                    <div class="grid-item"><img src="images/icons/argo-stacked-color.png" title="Argo CD"></div>
+                    <div class="grid-item"><img src="images/icons/icons8-prometheus-144.png" title="Prometheus"></div>
+                    <div class="grid-item"><img src="images/icons/icons8-grafana-144.png" title="Grafana"></div>
+                    <div class="grid-item"><img src="images/icons/icons8-elasticsearch-144.png" title="ELK Stack"></div>
+                    <div class="grid-item"><img src="images/icons/icons8-bash-144.png" title="Bash"></div>
+                    <div class="grid-item"><img src="images/icons/external-Linux-logos-and-brands-those-icons-flat-those-icons.png" title="Linux"></div>
+                    <div class="grid-item"><img src="images/icons/icons8-python-144.png"title="Python"></div>
+
+                  </div>
             </div>
         </div>
     </section>
@@ -147,7 +161,8 @@ fetch('https://66w06ptmw5.execute-api.us-east-1.amazonaws.com').then(function (r
         <span>Created By <a href="#home">Tafari</a> | <span class="far fa-copyright"></span> 2022 All rights reserved.</span>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+    <script src="./particle.js"></script>
 </body>
 
 </html>
