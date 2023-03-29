@@ -1,3 +1,5 @@
+     // Modal Setup
+
 
     $('.navbar .menu li a').click(function(){
         // applying again smooth scroll on menu items click
@@ -25,4 +27,5 @@
         loop: true
     });
 
- 
+
+  

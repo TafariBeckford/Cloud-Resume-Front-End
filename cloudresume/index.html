@@ -9,7 +9,6 @@
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
 <script src="https://kit.fontawesome.com/84a1e6fa92.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -64,8 +63,9 @@
             <h2 class="title">About me</h2>
             <div class="about-content">
             
-                    <p>I'm Tafari Beckford, a Cloud Engineer with a passion for DevOps. With knowledge in implementing cloud infrastructure on AWS and automating build and deployment pipelines using tools like Terraform, GitHub Actions, and Kubernetes. I seek to help organizations improve their development processes, scale and secure their applications efficiently. In addition to my technical skills, I have excellent problem-solving and communication skills, enabling me to work collaboratively with cross-functional teams and prioritize critical tasks.
-                        As a lifelong learner, I hold a B.Sc. in Computer Information Systems from Northern Caribbean University and continuously seek to expand my knowledge through certifications and other means. I'm excited to continue learning and growing in the field of cloud computing, and I'm always eager to tackle new challenges and find creative solutions.
+                    <p class="about-me">I'm Tafari Beckford, a Cloud Engineer with an affinity for DevOps. I have knowledge in implementing cloud infrastructure on AWS and automating build and deployment pipelines using tools such as Terraform, GitHub Actions, and Kubernetes. 
+                        My goal is to help organizations improve their development processes, scale, and secure their applications efficiently. Alongside my technical skills, I possess excellent problem-solving and communication abilities, which enable me to work collaboratively with cross-functional teams and prioritize critical tasks. 
+                        As a lifelong learner, I hold a B.Sc. in Computer Information Systems from Northern Caribbean University and continuously seek to expand my knowledge through certifications and other means. I am excited to continue learning and growing in the field of cloud computing, and I am always eager to tackle new challenges and find creative solutions.
                     </p>
                 
                 
@@ -77,9 +77,32 @@
     <!-- Education Section-->
     <section class="projects" id="projects">
         <div class="max-width">
-            <h2 class="title">My Projects</h2>
-           
-        </div>
+            <h2 class="title">Projects</h2>
+            <div class="image-container-wrapper">
+                <div class="image-container">
+                  <img src="./images/EKS.png" alt="your-image-1" width="600" height="500" style="cursor:pointer"
+                  onclick="onClick(this)" class="modal-hover-opacity">
+                  <div class="overlay">
+                    <p>EKS Application with Ingress</p>
+                  </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="./images/Wordpress.png" alt="your-image-1" width="600" height="500" style="cursor:pointer"
+                    onclick="onClick(this)" class="modal-hover-opacity">
+                    <div class="overlay">
+                        <p>AWS Web Hosting with Multi AZ</p>
+                      </div>
+                </div>
+                <div id="modal01" class="modal" onclick="this.style.display='none'">
+                    <span class="close" >&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <div class="modal-content">
+                      <img id="img01" style="max-width:105%">
+                    </div>
+                  </div>
+
+              
+              
     </section>
 
      <!-- Skills section-->
@@ -155,7 +178,7 @@ fetch('https://66w06ptmw5.execute-api.us-east-1.amazonaws.com').then(function (r
         
         <span>Created By <a href="#home">Tafari</a> | <span class="far fa-copyright"></span> 2022 All rights reserved.</span>
     </footer>
-
+    <script src="./modal.js"></script>
     <script src="./script.js"></script>
     <script src="./particle.js"></script>
 </body>
