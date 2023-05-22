@@ -1,28 +1,15 @@
-// Get the modal
-var modal = document.getElementById("modal");
+ // Open the modal
+ function openModal(src, caption) {
+  document.getElementById('modalImg').src = src;
+  document.getElementById('caption').innerHTML = caption;
+  document.getElementById('myModal').style.display = 'block';
+}
 
-// Get the image and insert it inside the modal
-var images = document.querySelectorAll(".image");
-var modalImg = document.getElementById("modal-image");
-var captionText = document.getElementById("caption");
-
-images.forEach(function(image) {
-  image.onclick = function() {
-    modal.style.display = "block";
-    modalImg.src = this.querySelector(".modal-image").src;
-    captionText.innerHTML = this.querySelector(".caption").innerHTML;
-  }
-});
-
-// Close the modal when the user clicks on <span> (x)
-var closeBtn = document.querySelector(".close1");
-closeBtn.onclick = function() {
+function closeModal() {
+  var modal = document.getElementById("myModal");
   modal.style.display = "none";
 }
 
-// Close the modal when the user clicks anywhere outside of it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+// Close the modal when the 'x' button is clicked
+var closeBtn = document.getElementsByClassName("close")[0];
+closeBtn.addEventListener("click", closeModal);

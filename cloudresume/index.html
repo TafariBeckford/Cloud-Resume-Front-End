@@ -75,30 +75,26 @@
     <!-- Education Section-->
     <section class="projects" id="projects">
             <h2 class="title">Projects</h2>
-            <div class="gallery">
-                <div class="image">
-                  <img src="images/AWS-EKS.png" alt="Image 1" class="modal-image" width="550" height="450">
-                  <div class="caption">Kubernetes Application managed with EKS</div>
+          
+            <div class="image-grid">
+                <div class="image-item">
+                    
+                  <img src="images/AWS-EKS.png " alt="Image 1" class="img-size" onclick="openModal(this.src, 'Kubernetes Application managed with EKS')">
                 </div>
-                
-                <div class="image">
-                  <img src="images/Serverless.png" alt="Image 2" class="modal-image" width="550" height="450">
-                  <div class="caption">AWS Serverless Application-Cloud Resume</div>
+                <div class="image-item">
+                  <img src="images/Serverless.png" alt="Image 2" class="img-size" onclick="openModal(this.src, 'AWS Serverless Application - Cloud Resume')">
                 </div>
-
-                <div class="image">
-                    <img src="images/Three-Tier.png" alt="Image 2" class="modal-image" width="550" height="450">
-                    <div class="caption">Highly Available 3-Tier Application -Wordpress </div>
-                  </div>
+                <div class="image-item">
+                  <img src="images/Three-Tier.png" alt="Image 3" class="img-size" onclick="openModal(this.src, 'High-Available and Scalable Three-Tier Application - Wordpress')">
+                </div>
               </div>
               
-              <!-- Modal -->
-              <div id="modal" class="modal">
-                <span class="close1">&times;</span>
-                <img class="modal-content" id="modal-image">
-                <div id="caption"></div>
+              <div id="myModal" class="modal">
+                <span class="close" onclick="closeModal">&times;</span>
+                <img class="modal-content" id="modalImg" alt="Modal Image">
+                <div id="caption" class="modal-caption"></div>
               </div>
-        
+              
     </section>
 
      <!-- Skills section-->
@@ -107,29 +103,91 @@
             <h2 class="title">Tools & Technologies</h2>
             <div class="skills-content">
                 <div class="grid-container">
-                    <div class="grid-item"><img src="images/icons/icons8-amazon-web-services-144.png" title="Amazon Web Services"></div>
-                    <div class="grid-item"><img src="images/icons/icons8-terraform-144.png" title="Terraform"></div>
-                    <div class="grid-item"><img src="images/icons/icons8-docker-144.png"title="Docker"></div>
-                    <div class="grid-item"><img src="images/icons/icons8-kubernetes-144.png" title="Kubernetes"></div>
-                    <div class="grid-item"><img src="images/icons/1638283616-packer.png" title="Packer"></div>
-                    <div class="grid-item"><img src="images/icons/helm-icon-color.png" title="Helm"></div>
-                    <div class="grid-item"><img src="images/icons/jenkins_logo_icon_170552.png" title="Jenkins"></div>
-                    <div class="grid-item"><img src="images/icons/github-actions.png" title="Github-Actions"></div>
-                    <div class="grid-item"><img src="images/icons/argo-stacked-color.png" title="Argo CD"></div>
-                    <div class="grid-item"><img src="images/icons/icons8-ansible-144.png" title="Ansible"></div>
-                    <div class="grid-item"><img src="images/icons/icons8-prometheus-144.png" title="Prometheus"></div>
-                    <div class="grid-item"><img src="images/icons/icons8-grafana-144.png" title="Grafana"></div>
-                    <div class="grid-item"><img src="images/icons/icons8-elasticsearch-144.png" title="ELK Stack"></div>
-                    <div class="grid-item"><img src="images/icons/icons8-jira-144.png" title="Jira"></div>
-                    <div class="grid-item"><img src="images/icons/icons8-confluence-144.png" title="Confluence"></div>
-                    <div class="grid-item"><img src="images/icons/icons8-bash-144.png" title="Bash"></div>
-                    <div class="grid-item"><img src="images/icons/external-Linux-logos-and-brands-those-icons-flat-those-icons.png" title="Linux"></div>
-                    <div class="grid-item"><img src="images/icons/icons8-python-144.png"title="Python"></div>
-                    <div class="grid-item"><img src="images/icons/icons8-html-5-144.png" title="HTML"></div>
-                    <div class="grid-item"><img src="images/icons/icons8-css3-144.png"title="CSS"></div>
-                    <div class="grid-item"><img src="images/icons/icons8-javascript-144.png"title="Javascript"></div>
+                    <div class="grid-item">
+                      <img src="images/icons/icons8-amazon-web-services-144.png" title="Amazon Web Services">
+                      <p class="tool-caption">Amazon Web Services</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/icons8-terraform-144.png" title="Terraform">
+                      <p class="tool-caption">Terraform</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/icons8-docker-144.png" title="Docker">
+                      <p class="tool-caption">Docker</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/icons8-kubernetes-144.png" title="Kubernetes">
+                      <p class="tool-caption">Kubernetes</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/1638283616-packer.png" title="Packer">
+                      <p class="tool-caption">Packer</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/helm-icon-color.png" title="Helm">
+                      <p class="tool-caption">Helm</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/jenkins_logo_icon_170552.png" title="Jenkins">
+                      <p class="tool-caption">Jenkins</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/github-actions.png" title="Github-Actions">
+                      <p class="tool-caption">Github-Actions</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/argo-stacked-color.png" title="Argo CD">
+                      <p class="tool-caption">Argo CD</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/icons8-ansible-144.png" title="Ansible">
+                      <p class="tool-caption">Ansible</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/icons8-prometheus-144.png" title="Prometheus">
+                      <p class="tool-caption">Prometheus</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/icons8-grafana-144.png" title="Grafana">
+                      <p class="tool-caption">Grafana</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/icons8-elasticsearch-144.png" title="ELK Stack">
+                      <p class="tool-caption">ELK Stack</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/icons8-jira-144.png" title="Jira">
+                      <p class="tool-caption">Jira</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/icons8-confluence-144.png" title="Confluence">
+                      <p class="tool-caption">Confluence</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/icons8-bash-144.png" title="Bash">
+                      <p class="tool-caption">Bash</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/external-Linux-logos-and-brands-those-icons-flat-those-icons.png" title="Linux">
+                      <p class="tool-caption">Linux</p>
+                    </div>
+                    <div class="grid-item">
+                      <img src="images/icons/icons8-python-144.png" title="Python">
+                      <p class="tool-caption">Python</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/icons/icons8-html-5-144.png" title="HTML5">
+                        <p class="tool-caption">HTML</p>
+                      </div>
+                      <div class="grid-item">
+                        <img src="images/icons/icons8-css3-144.png" title="CSS">
+                        <p class="tool-caption">CSS</p>
+                      </div>
+                      <div class="grid-item">
+                        <img src="images/icons/icons8-javascript-144.png" title="Javascript">
+                        <p class="tool-caption">Javascript</p>
+                      </div>
                   
-                  </div>
                   </div>
             </div>
         </div>
