@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tafari Beckford Portfolio">
+    <meta name="robots" content="index, follow, noarchive">
     <title>Tafari's Portfolio</title>
 
 <link rel="stylesheet" href="./style.css">
@@ -24,13 +26,13 @@
     </div>
     <nav class="navbar">
         <div class="max-width">
-            <div class="logo"><a href="#">T<span>B</span></a></div>
+            <div class="logo"><a href="#">T.<span>&nbsp;Beckford</span></a></div>
             <ul class="menu">
                 <li><a href="#home" class="menu-btn">Home</a></li>
                 <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#certifications" class="menu-btn">Certifications</a></li>
-                <li><a href="#skills" class="menu-btn">Technologies</a></li>
+                <li><a href="#skills" class="menu-btn">My Skills</a></li>
                 <li><a href="#projects" class="menu-btn">Projects</a></li>
+                <li><a href="#certifications" class="menu-btn">Certifications</a></li>
                 <li><a href="https://blog.tafaribeckford.com" class="menu-btn">Blog</a></li>
                 
             </ul>
@@ -47,7 +49,7 @@
                 <div class="text-2">Hi<span>&#128075;</span>, I'm <span class="typing"></span></div>
                 <div class="text-3">And I'm a <span class="typing-2"></span></div>
                 <br>
-                <div class="icon"><a href="https://www.linkedin.com/in/tafari-beckford/"><i class="fa-brands fa-linkedin-in fa-2x"></i></a></i><a href="https://github.com/TafariBeckford"><i class="fa-brands fa-github fa-2x"></i></a><a href="mailto:beckfordtafari21@gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a></i></div>
+                <div class="icon"><a href="https://www.linkedin.com/in/tafari-beckford/"><i class="fa-brands fa-linkedin-in fa-2x"></i></a></i><a rel="nofollow" href="https://github.com/TafariBeckford"><i class="fa-brands fa-github fa-2x"></i></a><a href="mailto:beckfordtafari21@gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a></i></div>
 
             </div>
             
@@ -63,7 +65,15 @@
             <h2 class="title">About me</h2>
             <div class="about-content">
             
-                    <p class="about-me">I'm Tafari Beckford, a Cloud Engineer with an affinity for DevOps. I am skilled in implementing and maintaining DevOps practices and tools to streamline software development processes. I have a solid understanding of the software development lifecycle (SDLC), version control, containerization, container orchestration, continuous integration/continuous deployment (CI/CD), Infrastructure as Code (IaC), and cloud computing. My goal is to help organizations improve their development processes, scale, and secure their applications efficiently. Alongside my technical skills, I possess excellent problem-solving and communication abilities, which enable me to work collaboratively with cross-functional teams and prioritize critical tasks. As a lifelong learner, I hold a B.Sc. in Computer Information Systems from Northern Caribbean University and continuously seek to expand my knowledge through labs, certifications, and other means. I am excited to continue learning and growing in the field of cloud computing, and I am always eager to tackle new challenges and find creative solutions.
+                    <p class="about-me">
+                      I'm Tafari Beckford, a Cloud/DevOps Engineer based in Jamaica, skilled in implementing and maintaining DevOps practices and tools to streamline software development processes. 
+                      I have a solid understanding of the software development lifecycle (SDLC), version control, containerization, container orchestration, continuous integration/continuous deployment (CI/CD), 
+                      Infrastructure as Code (IaC), and cloud computing. 
+                      My goal is to help organizations improve their development processes, scale, deploy and secure their applications efficiently. Alongside my technical skills, 
+                      I possess excellent problem-solving and communication abilities, which enable me to work collaboratively with cross-functional teams and prioritize critical tasks. 
+                      As a lifelong learner, I hold a B.Sc. in Computer Information Systems from Northern Caribbean University 
+                      and continuously seek to expand and validate my knowledge through labs, certifications, and other means. I am excited to continue learning and growing in the field of cloud computing, 
+                      and I am always eager to tackle new challenges and find creative solutions.
                     </p>
                 
                 
@@ -74,12 +84,13 @@
 
     <!-- Education Section-->
     <section class="projects" id="projects">
-            <h2 class="title">Projects</h2>
+            <h2 class="title">Personal Projects</h2>
           
             <div class="image-grid">
                 <div class="image-item">
-                    
+                  <div class="overlay">
                   <img src="images/AWS-EKS.png " alt="Image 1" class="img-size" onclick="openModal(this.src, 'Kubernetes Application managed with EKS')">
+                </div>
                 </div>
                 <div class="image-item">
                   <img src="images/Serverless.png" alt="Image 2" class="img-size" onclick="openModal(this.src, 'AWS Serverless Application - Cloud Resume')">
@@ -88,6 +99,7 @@
                   <img src="images/Three-Tier.png" alt="Image 3" class="img-size" onclick="openModal(this.src, 'High-Available and Scalable Three-Tier Application - Wordpress')">
                 </div>
               </div>
+            </div>
               
               <div id="myModal" class="modal">
                 <span class="close" onclick="closeModal">&times;</span>
@@ -100,7 +112,7 @@
      <!-- Skills section-->
     <section class="skills" id="skills">
         <div class="max-width">
-            <h2 class="title">Tools & Technologies</h2>
+            <h2 class="title">My Skills</h2>
             <div class="skills-content">
                 <div class="grid-container">
                     <div class="grid-item">
@@ -124,6 +136,10 @@
                       <p class="tool-caption">Packer</p>
                     </div>
                     <div class="grid-item">
+                      <img src="images/icons/icons8-ansible-144.png" title="Ansible">
+                      <p class="tool-caption">Ansible</p>
+                    </div>
+                    <div class="grid-item">
                       <img src="images/icons/helm-icon-color.png" title="Helm">
                       <p class="tool-caption">Helm</p>
                     </div>
@@ -138,10 +154,6 @@
                     <div class="grid-item">
                       <img src="images/icons/argo-stacked-color.png" title="Argo CD">
                       <p class="tool-caption">Argo CD</p>
-                    </div>
-                    <div class="grid-item">
-                      <img src="images/icons/icons8-ansible-144.png" title="Ansible">
-                      <p class="tool-caption">Ansible</p>
                     </div>
                     <div class="grid-item">
                       <img src="images/icons/icons8-prometheus-144.png" title="Prometheus">
@@ -200,19 +212,19 @@
             <div class="serv-content">
                 <div class="card">
                     <div class="box">
-                   <a href="https://www.credly.com/badges/b52631e8-a133-4a07-82d8-ae3b057255a2/public_url"><img src="images/aws-certified-solutions-architect-associate (1).png"></a> 
+                   <a rel="nofollow" href="https://www.credly.com/badges/b52631e8-a133-4a07-82d8-ae3b057255a2/public_url"><img src="images/aws-certified-solutions-architect-associate (1).png"></a> 
                       
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                    <a href="https://www.credly.com/badges/6e4b9244-557c-4ccd-86b6-bacc768700a0/public_url"><img src="images/hashicorp-certified-terraform-associate.png"></a>
+                    <a rel="nofollow" href="https://www.credly.com/badges/6e4b9244-557c-4ccd-86b6-bacc768700a0/public_url"><img src="images/hashicorp-certified-terraform-associate.png"></a>
                     </div>
                       
                 </div>
                 <div class="card">
                     <div class="box">
-                   <a href="https://www.credly.com/badges/1634649c-ef58-426f-8e7a-3b885dca8713/public_url"><img src="images/aws-certified-developer-associate.png"></a> 
+                   <a rel="nofollow" href="https://www.credly.com/badges/1634649c-ef58-426f-8e7a-3b885dca8713/public_url"><img src="images/aws-certified-developer-associate.png"></a> 
                       
                     </div>
                 </div>
