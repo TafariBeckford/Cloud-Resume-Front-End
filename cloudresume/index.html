@@ -12,11 +12,11 @@
 <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
 <script src="https://kit.fontawesome.com/84a1e6fa92.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
 </head>
 
 
@@ -84,30 +84,56 @@
 
     <!-- Education Section-->
     <section class="projects" id="projects">
-            <h2 class="title">Personal Projects</h2>
-          
-            <div class="image-grid">
-                <div class="image-item">
+      <h2 class="title">Personal Projects</h2>
+      <div class="grid">
+          <div class="grid-item">
+              <a data-fancybox href="images/Serverless.png">
+                  <img src="images/Serverless.png" alt="Image 1">
                   <div class="overlay">
-                  <img src="images/AWS-EKS.png " alt="Image 1" class="img-size" onclick="openModal(this.src, 'Kubernetes Application managed with EKS')">
-                </div>
-                </div>
-                <div class="image-item">
-                  <img src="images/Serverless.png" alt="Image 2" class="img-size" onclick="openModal(this.src, 'AWS Serverless Application - Cloud Resume')">
-                </div>
-                <div class="image-item">
-                  <img src="images/Three-Tier.png" alt="Image 3" class="img-size" onclick="openModal(this.src, 'High-Available Web Application - Wordpress')">
-                </div>
-              </div>
-            </div>
-              
-              <div id="myModal" class="modal">
-                <span class="close" onclick="closeModal">&times;</span>
-                <img class="modal-content" id="modalImg" alt="Modal Image">
-                <div id="caption" class="modal-caption"></div>
-              </div>
-              
-    </section>
+                      <div class="overlay-text">
+                        Cloud Resume – AWS Full-Stack Serverless Application
+                        <p class="overlay-paragraph">Teck Stack: Python, Terraform, AWS S3, AWS PI Gateway, AWS Lambda, AWS DynamoDB, AWS Cloudfront, AWS Route53, AWS ELB, Github-Actions</p>
+
+                      </div>
+                  </div>
+              </a>
+          </div>
+
+          <div class="grid-item">
+              <a data-fancybox href="images/AWS-EKS.png">
+                  <img src="images/AWS-EKS.png" alt="Image 2">
+                  <div class="overlay">
+                    <div class="overlay-text">
+                    DevOps the Hard Way – Kubernetes
+                    <p class="overlay-paragraph">Teck Stack: Uber Python API, AWS EKS, AWS ELB, Terraform, Jenkins, Argo CD, Prometheus, Grafana, ELK Stack, Nginx Ingress</p>
+                    </div>
+                  </div>
+              </a>
+          </div>
+
+          <div class="grid-item">
+              <a data-fancybox href="images/Three-Tier.png">
+                  <img src="images/Three-Tier.png" alt="Image 3">
+                  <div class="overlay">
+                      <div class="overlay-text">Highly Available Web Application - WordPress
+                        <p class="overlay-paragraph">Teck Stack: AWS RDS(MYSQL), AWS EFS, AWS ASG, AWS ELB, Terraform, Packer, Ansible, Jenkins</p>
+
+                      </div>
+                      
+                  </div>
+              </a>
+          </div>
+
+          <!-- Repeat the above structure for the remaining grid items -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal" style="display: none;">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modal-image">
+      </div>
+
+  </section>
 
      <!-- Skills section-->
     <section class="skills" id="skills">
@@ -254,7 +280,8 @@ fetch('https://66w06ptmw5.execute-api.us-east-1.amazonaws.com').then(function (r
         
         <span>Created By <a href="#home">Tafari</a> | <span class="far fa-copyright"></span> 2022 All rights reserved.</span>
     </footer>
-    <script src="./modal.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="./script.js"></script>
     <script src="./particle.js"></script>
 </body>
