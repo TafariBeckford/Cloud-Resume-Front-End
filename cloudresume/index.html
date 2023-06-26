@@ -87,29 +87,61 @@
       <h2 class="title">Personal Projects</h2>
       <div class="grid">
           <div class="grid-item">
-              <a data-fancybox href="images/Serverless.png">
+              <a data-fancybox="gallery1" href="images/Serverless.png">
                   <img src="images/Serverless.png" alt="Image 1">
+                  
                   <div class="overlay">
                       <div class="overlay-text">
                         Cloud Resume – AWS Full-Stack Serverless Application
-                        <p class="overlay-paragraph">Teck Stack: Python, Terraform, AWS S3, AWS PI Gateway, AWS Lambda, AWS DynamoDB, AWS Cloudfront, AWS Route53, AWS ELB, Github-Actions</p>
+                        <p class="overlay-paragraph">Teck Stack: Python, Terraform, AWS S3, AWS API Gateway, AWS Lambda, AWS DynamoDB, AWS Cloudfront, AWS Route53, AWS ELB, Cypress, Checkov, Github-Actions</p>
 
                       </div>
                   </div>
               </a>
+              <div style="display:none">
+                <a data-fancybox="gallery1" href="images/preview/cloud-resume.png">
+                  <img src="images/preview/cloud-resume.png" />
+                </a>
+              </div>
           </div>
-
           <div class="grid-item">
-              <a data-fancybox href="images/AWS-EKS.png">
+              <a data-fancybox="gallery2" href="images/AWS-EKS.png">
                   <img src="images/AWS-EKS.png" alt="Image 2">
                   <div class="overlay">
                     <div class="overlay-text">
                     DevOps the Hard Way – Kubernetes
-                    <p class="overlay-paragraph">Teck Stack: Uber Python API, AWS EKS, AWS ELB, Terraform, Jenkins, Argo CD, Prometheus, Grafana, ELK Stack, Nginx Ingress</p>
+                    <p class="overlay-paragraph">Teck Stack: Uber Python API, VPC, AWS EKS, AWS ELB, Terraform, Jenkins, Argo CD, Helm, Prometheus, Grafana, ELK Stack, Nginx Ingress</p>
                     </div>
                   </div>
               </a>
+              <div style="display:none">
+                <a data-fancybox="gallery2" href="images/preview/uber.png">
+                  <img src="images/preview/uber.png" />
+                </a>
+                <a data-fancybox="gallery2" href="images/preview/grafana.png">
+                  <img src="images/preview/grafana.png" />
+                </a>
+                <a data-fancybox="gallery2" href="images/preview/prom.png">
+                  <img src="images/preview/prom.png" />
+                </a>
+              </div>
           </div>
+          <div class="grid-item">
+            <a data-fancybox="gallery3" href="images/AWS-ECS.png">
+                <img src="images/AWS-ECS.png" alt="Image 2">
+                <div class="overlay">
+                  <div class="overlay-text">
+                  Tool Depot Ja Tool Rental – ECS
+                  <p class="overlay-paragraph">Teck Stack: PHP, AWS ECS(Fargate), AWS ALB, AWS RDS(MYSQL), AWS WAF, VPC, Secrets-Manager, VPC Endpoints, S3, Terraform,</p>
+                  </div>
+                </div>
+            </a>
+            <div style="display:none">
+              <a data-fancybox="gallery3" href="images/preview/tool-depot.png">
+                <img src="images/preview/tool-depot.png" />
+              </a>
+            </div>
+        </div>
 
           <div class="grid-item">
               <a data-fancybox href="images/Three-Tier.png">
@@ -119,7 +151,6 @@
                         <p class="overlay-paragraph">Teck Stack: AWS RDS(MYSQL), AWS EFS, AWS ASG, AWS ELB, Terraform, Packer, Ansible, Jenkins</p>
 
                       </div>
-                      
                   </div>
               </a>
           </div>
@@ -234,7 +265,7 @@
     <!-- certifications section -->
     <section class="certifications" id="certifications">
         <div class="max-width">
-            <h2 class="title">Certifications</h2>
+            <h2 class="title">Certifications & Bootcamps</h2>
             <div class="serv-content">
                 <div class="card">
                     <div class="box">
@@ -254,13 +285,25 @@
                       
                     </div>
                 </div>
-              
+                <div class="card">
+                  <div class="box">
+                 <a rel="nofollow" href="https://www.credential.net/83fd702c-b9b9-426a-96e4-476450f402ab"><img src="images/cloud skills devops badge.png"></a> 
+                    
+                  </div>
+              </div>
+              <div class="card">
+                <div class="box">
+               <a rel="nofollow" href="https://www.credential.net/e5bf5285-5ca5-4afe-a8cc-3ca589dc9f7d"><img src="images/cloud skills linux badge.png"></a> 
+                  
+                </div>
+            </div>
               
             </div>
             </div>
         </div>
         <p class="centervisit">You're visitor number:<span id="counter"></span></p>
     </section>
+    
 
    <script>
 fetch('https://66w06ptmw5.execute-api.us-east-1.amazonaws.com').then(function (response) {
